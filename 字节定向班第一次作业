@@ -1,0 +1,31 @@
+字节定向班第一次作业
+任务一：按顺序打印出 App、ViewController 生命周期的各个事件
+1、	APP生命周期
+点击程序图标->执行main函数->通过UIApplicationMain函数->初始化UIApplication对象并且为它设置代理对象->UIApplicaton对象->监听系统事件->程序退出结束
+其中，为UIApplication设置代理对象时有如下对应关系：
+程序状态->UIApplication对象代理状态
+程序载入后->applicationDidFinishLaunching
+将要进入非活动状态->applicationWillResignActive
+程序进入活动状态->applicationDidBecomeActive
+程序进入后台->applicationDidEnterBackground
+程序从后台重新进入前台->applicationWillEnterForeground
+内存警告，程序将要终止->applicationDidReceivememoryWarning
+程序将要退出结束->applicationWillTerminate
+其他 …
+2、	ViewController生命周期
+Alloc/init->loadView->viewDidLoad->viewWillAppear->viewDidAppear ->viewWillDisappear->viewDidDisappear->dealloc
+任务二：写出五中常用UI控件
+UIScroolView（可滚动的UI控件）
+UITableView（单列展示）
+UICollectionView（可以设置多个不同大小的格子来定制布局）
+UIWebView&WKWebView（显示网页的UI控件）
+UIButton（提供按钮对用户点击做出反应）
+UITextField（提供文本输入框）
+UIToolbar（提供工具条按钮）
+任务三：列举出三个UITableViewDelegate声明的方法
+1.选中某行cell调用此方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+2.自定义每组头部的view
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section;
+3.自定义每组尾部的view
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
