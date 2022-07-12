@@ -1,4 +1,4 @@
-字节定向班第一次作业
+#字节定向班第一次作业
 任务一：按顺序打印出 App、ViewController 生命周期的各个事件
 1、	APP生命周期
 点击程序图标->执行main函数->通过UIApplicationMain函数->初始化UIApplication对象并且为它设置代理对象->UIApplicaton对象->监听系统事件->程序退出结束
